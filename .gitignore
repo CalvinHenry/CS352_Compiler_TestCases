@@ -5,12 +5,16 @@
 
 # Exceptions
 ############
+
 # Don't ignore the gitignore
 !.gitignore
+
 # .txt files are used to store test cases
 !*.txt
+
 # Bash scripts for the test script runner
 !*.sh
+
 # Documentation and license 
 !.md
 !LICENSE
