@@ -1,13 +1,19 @@
 #!/bin/bash
+
+RED='\033[0;31m'
+NC='\033[0m'
+BLUE='\033[0;34m'
 error=0
+fails=0
 for file in p*.txt
 do
     printf "Test Case: %s\n" $file
     ../parser < $file
     if [ $? -eq 0 ]; then
-        printf "Test Case %s Successful\n" $file
+        printf "${BLUE}Test Case %s Successful\n${NC}" $file
     else
-        printf "Test Case %s Failed \n" $file
+        printf "${RED}Test Case %s Failed \n${NC}" $file
+        fails=$((fails+1))
     fi
 done
 
@@ -16,9 +22,11 @@ do
     printf "Test Case: %s\n" $file
     ../parser < $file
     if [ $? -eq 0 ]; then
-        printf "Test Case %s Failed \n" $file
+        printf "${RED}Test Case %s Failed \n${NC}" $file
+        fails=$((fails+1))
     else
-        printf "Test Case %s Successful\n" $file
+        printf "${BLUE}Test Case %s Successful\n${NC}" $file
     fi
 done
+printf "Finished testing with %d Failures\n" $fails
 exit 0
