@@ -1,8 +1,8 @@
 class Dog {
-	public static void main (String [] id) {
-               
+      public static void main (String [] id) {
 
-	}
+
+      }
 
 }
 
@@ -17,4 +17,3 @@ int[] a;
 int [][] b;
 type [] [ ] [] [] c;
 }
-
