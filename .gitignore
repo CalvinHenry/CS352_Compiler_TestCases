@@ -9,8 +9,8 @@
 # Don't ignore the gitignore
 !.gitignore
 
-# .txt files are used to store test cases
-!*.txt
+# .java files are used to store test cases
+!*.java
 
 # Bash scripts for the test script runner
 !*.sh
