@@ -6,7 +6,8 @@ BLUE='\033[0;34m'
 EXT=".java"
 error=0
 fails=0
-dir=""
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" >/dev/null 2>&1 && pwd  )"
+
 if [ "$dir" != "" ]; then
     cd $dir
 fi
