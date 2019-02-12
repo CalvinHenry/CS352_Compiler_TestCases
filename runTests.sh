@@ -5,6 +5,11 @@ NC='\033[0m'
 BLUE='\033[0;34m'
 error=0
 fails=0
+dir=""
+if [ "$dir" != "" ]; then
+    cd $dir
+fi
+
 for file in p*.txt
 do
     printf "Test Case: %s\n" $file
