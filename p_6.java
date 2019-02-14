@@ -14,7 +14,7 @@ public t method(int a, t[][][] b){
     int b;
     a = b;
     b = c;
-    return true + false - 2 * 3/ (4 + +5);
+    return true + +false - 2 * 3/ (4 + +5);
 }
 }
 
