@@ -12,6 +12,18 @@ if [ "$dir" != "" ]; then
     cd $dir
 fi
 
+for file in f*${EXT}
+do
+    printf "Test Case: %s\n" $file
+    ../parser $file
+    if [ $? -eq 0 ]; then
+        printf "${RED}Test Case %s Failed \n\n${NC}" $file
+        fails=$((fails+1))
+    else
+        printf "${BLUE}Test Case %s Successful\n\n${NC}" $file
+    fi
+done
+
 for file in p*${EXT}
 do
     printf "Test Case: %s\n" $file
@@ -24,17 +36,6 @@ do
     fi
 done
 
-for file in f*${EXT}
-do
-    printf "Test Case: %s\n" $file
-    ../parser $file
-    if [ $? -eq 0 ]; then
-        printf "${RED}Test Case %s Failed \n\n${NC}" $file
-        fails=$((fails+1))
-    else
-        printf "${BLUE}Test Case %s Successful\n\n${NC}" $file
-    fi
-done
 printf "=================================\n"
 printf "Finished testing with %d Failures\n" $fails
 exit 0
