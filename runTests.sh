@@ -15,7 +15,7 @@ fi
 for file in p*${EXT}
 do
     printf "Test Case: %s\n" $file
-    ../parser < $file
+    ../parser  $file
     if [ $? -eq 0 ]; then
         printf "${BLUE}Test Case %s Successful\n\n${NC}" $file
     else
@@ -27,7 +27,7 @@ done
 for file in f*${EXT}
 do
     printf "Test Case: %s\n" $file
-    ../parser < $file
+    ../parser $file
     if [ $? -eq 0 ]; then
         printf "${RED}Test Case %s Failed \n\n${NC}" $file
         fails=$((fails+1))
