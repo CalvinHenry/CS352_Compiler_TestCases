@@ -7,16 +7,12 @@ class Dog {
 }
 
 class Fish {
-public t method(int a, t[][][] b){
+public t method(int a, int [][][] b){
     int a;
 
     int b;
-    a = b;
-    b = c;
     return true + +false - 2 * 3/ (4 + +5);
 }
-    public s method(){
-        return this.a(a,b,c,d,e,f,g,h,i,j,k,l,(a + c) - -+-+ - -+ +(a * -b + 3)||4);
-    }
+
 }
 

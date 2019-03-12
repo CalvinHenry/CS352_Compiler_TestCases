@@ -6,15 +6,15 @@ class Dog {
 }
 
 class Fish {
-    public t method(int c, int d){
+    public boolean method(int c, int d){
 	
 	Fish a;
 	a = new Fish();
 	
-	x = new boolean[c][d];
+	boolean [][]x = new boolean[c][d];
 
-	
-	return true;
+	return x[c][d];
+
     }
     
 }
