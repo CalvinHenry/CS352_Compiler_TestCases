@@ -1,5 +1,8 @@
 class C {
-	public static void main (String[] str){
-		This is a broken comment */
-	}
+	public static void main (String [] id) { { } }
 }
+
+/*	This is a multiline
+	comment with escapes
+	\e \n \\ \e \abc
+	/* /////*****/
