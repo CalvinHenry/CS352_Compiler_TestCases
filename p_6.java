@@ -9,9 +9,10 @@ class Fish {
     public boolean method(int c, int d){
 	
 	Fish a;
+        boolean [][] x;
 	a = new Fish();
 	
-	boolean [][]x = new boolean[c][d];
+	x = new boolean[c][d];
 
 	return x[c][d];
 

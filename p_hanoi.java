@@ -21,7 +21,7 @@ class HanoiDemo {
 
 class Hanoi {
 	// members go here, but here the list is empty.
-
+    int dummy;
 	// methods go here
 	public int start(int n) {
 		// move `n` disks from disk 1 to disk 3, using disk 2

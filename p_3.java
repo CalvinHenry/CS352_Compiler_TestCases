@@ -10,6 +10,11 @@ class Cat {
 int a;
 int b;
 int c;
+
+    public int method(){
+        int a;
+        return x;
+    }
 }
 
 class Fish {
