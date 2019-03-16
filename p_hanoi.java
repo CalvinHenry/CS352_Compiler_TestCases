@@ -9,7 +9,7 @@ class HanoiDemo {
 			// `dummy` is a variable.
 			// It is not declared but the syntax parser doesn't care about that.
 			// In this way the program can survive parsing.
-			dummy = new Hanoi().start(8);
+                    System.out.println(new Hanoi().start(8));
 
 			/* The class `Numbers` is in the second sample code
 			 * This also poses no syntax errors but is semantically incorrect

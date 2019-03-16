@@ -6,15 +6,18 @@ class Dog {
 }
 
 class Fish {
+    public int getOne(){
+        return +1;
+    }
     public boolean method(int c, int d){
 	
 	Fish a;
-        boolean [][] x;
-	a = new Fish();
+        boolean [][][] x;
+	//a = new Fish();
 	
-	x = new boolean[c][d];
+	x = new boolean[c][d][2];
 
-	return x[c][d];
+	return x[c][d][2];
 
     }
     

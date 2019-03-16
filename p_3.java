@@ -12,8 +12,7 @@ int b;
 int c;
 
     public int method(){
-        int a;
-        return x;
+        return a;
     }
 }
 
