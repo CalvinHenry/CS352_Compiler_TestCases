@@ -89,7 +89,7 @@ printf "Interpretation failures:             %d\n" $runFail
 
 if [ $compFail -ne 0 ]; then
     printf "\n"
-    printf "{ORANGE}%d Test case(s) failed to compile with Javac. Please check the test cases and try to run them again" $compFail
+    printf "${ORANGE}%d Test case(s) failed to compile with Javac. Please check the test cases and try to run them again" $compFail
 fi
 
 exit 0

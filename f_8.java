@@ -14,18 +14,12 @@ class Cat {
 		boolean local;
                 int i;
 		local = x;
-                System.out.println(this.blub(true));
                 if(x)
 		return 0;
                 else {}
                 i = new Fish().blub(true);
                 return 0;
 	}
-
-    public int blub(boolean y){
-        System.out.println("Test\n");
-        return 0;
-    }
 
 }
 
@@ -44,7 +38,7 @@ class Fish {
 
 class Tuna extends Fish {
 
-    public int blubb(boolean y, boolean x){
+    public int blub(boolean y, boolean x){
         if(x)
             return this.blub(y);
         else {}
