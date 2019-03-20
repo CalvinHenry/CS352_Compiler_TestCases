@@ -20,13 +20,13 @@ class GraphTester {
         g = new Graph();
         ret = g.create(5, false);
         ret = g.addEdge(0, 1);
-        /*ret = g.addEdge(0, 2);
+        ret = g.addEdge(0, 2);
         ret = g.addEdge(0, 3);
         ret = g.addEdge(0, 4);
         System.out.println(g.edgeExists(0, 1));
         System.out.println(g.edgeExists(1, 0));
         System.out.println(g.edgeExists(4, 0));
-        System.out.println(g.edgeExists(3, 2));*/
+        System.out.println(g.edgeExists(3, 2));
         return ret;
     }
 }
