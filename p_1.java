@@ -1,4 +1,4 @@
-class Dog {
+class p_Dog {
 
 	public static void main (String [] id) {
             System.out.println(new Cat().woof(false));

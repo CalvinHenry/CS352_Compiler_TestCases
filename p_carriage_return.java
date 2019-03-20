@@ -1,4 +1,4 @@
-class abc123 {
+class p_abc123 {
 	public static void main (String [] id) {
 		{
 			System.out.println("Printing!");

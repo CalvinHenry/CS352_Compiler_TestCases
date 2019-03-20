@@ -1,4 +1,4 @@
-class C {
+class p_C {
 	public static void main (String [] id) { { } }
 }
 

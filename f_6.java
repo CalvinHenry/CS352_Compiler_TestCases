@@ -2,19 +2,19 @@
 // - List of statements in a block
 // - Assignment operations
 // - Function calls with multiple arguments
-class p_HanoiDemo {
+class HanoiDemo {
 	public static void main (String [] argv) {
 		{
 			// Statements
 			// `dummy` is a variable.
 			// It is not declared but the syntax parser doesn't care about that.
 			// In this way the program can survive parsing.
-                                        System.out.println(new Hanoi().start(8));
+                    System.out.println(new Hanoi().start(8));
 
 			/* The class `Numbers` is in the second sample code
 			 * This also poses no syntax errors but is semantically incorrect
 			 */
-                    //			System.out.println(new Numbers().choose(10, 5));
+			System.out.println(new Numbers().choose(10, 5));
 		}
 	}
 }
@@ -25,7 +25,7 @@ class Hanoi {
 	// methods go here
 	public int start(int n) {
 		// move `n` disks from disk 1 to disk 3, using disk 2
-		dummy = this.recursive(n, 1, 2, 3);
+		dummy = this.recursive(n, 1, 1 == 4, 3);
 		// The methods always return a value.
 		// It's important that the return value is assigned to a variable
 		// since in the grammar, a single method invocation does not
@@ -41,7 +41,7 @@ class Hanoi {
 			System.out.println("\n");
 		} else {
 			// move 1 to n-1 from start to middle
-                    dummy = this.recursive(n-1, start, end, middle);
+			dummy = this.recursive(n-1, start, end, middle);
 			// move n from start to end
 			System.out.println("move ");
 			System.out.println(n);

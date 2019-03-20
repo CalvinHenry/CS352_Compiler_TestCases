@@ -3,8 +3,8 @@ class p_NumberDemo {
         {
 		System.out.println("10 choose 4 is ");
 		//System.out.println(new Numbers().choose(10, 4));
-		System.out.println("\nGCD of 84, 132 is ");
-		System.out.println(new Numbers().gcd(2035616, 64));
+		System.out.println("add 2 numbers ");
+		System.out.println(new Numbers().add(84, 132));
         }
 	}
 }
@@ -14,20 +14,27 @@ class p_NumberDemo {
 // - Unary and complicated binary arithmetic operations
 // - While loop
 class Numbers {
-	public int choose(int n, int k) {
-		int res;
-        int i;
-		if (!(n<k)) {
-			// n! / (k! (n-k)!)
-			i = 1;
-			res = +1; // just to test unary +
-			while (i <= k) {
-				res = res * (n-k+i) / i;
-			}
-		} else {
-			res = 0;
-		}
-		return res;
+    int sum;
+    public int start(){
+        sum = 0;
+        return 0;
+    }
+	public int add(int n, int k) {
+            int x;
+            int y;
+            x = 10;
+            y = 10;
+            System.out.print("N is: ");
+            System.out.println(n);
+            sum = x + y + sum;
+            if(sum < 50){
+                System.out.println(sum);
+                return this.add(n,k); }
+            else if(sum >= 50)
+                    return sum;
+            else {}
+            return sum;
+
 	}
 
 	public int gcd(int a, int b) {

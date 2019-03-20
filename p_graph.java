@@ -5,16 +5,31 @@
 // - Complicated boolean expression with comparison and logical operation
 // - '.length' opearation on different levels of 2D array
 
-class GraphDemo {
+class p_GraphDemo {
 	public static void main(String []a) { {
-		x = star.create(5, false);
-		x = star.addEdge(0, 1);
-		x = star.addEdge(0, 2);
-		x = star.addEdge(0, 3);
-		x = star.addEdge(0, 4);
+                System.out.println(new GraphTester().testGraph());
 	} }
 }
 
+class GraphTester {
+    Graph g;
+
+    public int testGraph(){
+        int ret;
+
+        g = new Graph();
+        ret = g.create(5, false);
+        ret = g.addEdge(0, 1);
+        /*ret = g.addEdge(0, 2);
+        ret = g.addEdge(0, 3);
+        ret = g.addEdge(0, 4);
+        System.out.println(g.edgeExists(0, 1));
+        System.out.println(g.edgeExists(1, 0));
+        System.out.println(g.edgeExists(4, 0));
+        System.out.println(g.edgeExists(3, 2));*/
+        return ret;
+    }
+}
 class Graph {
 	boolean[][] adjacency;
 	public int create(int nNodes, boolean reflexive) {
@@ -52,9 +67,12 @@ class Graph {
 			visited = new boolean[adjacency.length];
 
 			/* BFS or DFS, but not complete yet*/
-		} else {}
+		} else { color = new int[1];}
 		return color;
 	}
+    public boolean edgeExists(int x, int y){
+        return adjacency[x][y];
+    }
 }
 
 class MultiGraph extends Graph {
