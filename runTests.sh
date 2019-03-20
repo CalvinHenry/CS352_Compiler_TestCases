@@ -23,7 +23,7 @@ for file in f*${EXT}
 do
     tests=$((tests+1))
     printf "Test Case: %s\n" $file
-    ../parser $file
+    ../typechecker $file
     if [ $? -eq 0 ]; then
         printf "${RED}Test Case %s Failed in Grammar Checking\n\n${NC}" $file
         fails=$((fails+1))
@@ -38,7 +38,7 @@ for file in p*${EXT}
 do
     tests=$((tests+1))
     printf "Test Case: %s\n" $file
-    ../parser  $file > userOutput.txt
+    ../typechecker  $file > userOutput.txt
     if [ $? -eq 0 ]; then
 
         javac $file
