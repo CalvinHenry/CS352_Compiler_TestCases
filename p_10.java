@@ -46,4 +46,5 @@ class Tuna extends Fish {
 
         return 0;
     }
+
 }
