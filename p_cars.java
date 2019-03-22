@@ -16,7 +16,9 @@ class fakeMain {
         a = new Car();
         b = new Truck();
         v = a;
+        
         ret = a.makeCar(4);
+        System.out.println(v.move());
         ret = b.makeTruck(10);
         ret = this.race(a, b);
         return 0;
@@ -51,6 +53,9 @@ class Vehicle {
     public int create(int speed){
         moveSpeed = speed;
         return 0;
+    }
+    public int getSpeed(){
+        return moveSpeed;
     }
 
     public int move(){
