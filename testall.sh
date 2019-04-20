@@ -1,3 +1,7 @@
+#THIS FILE SHOULD NOT BE RUN ON DATA, IT IS MEANT TO BE RUN ON THE RASPBERRY PI VM AFTER YOU RUN PREPTESTS ON DATA
+
+#For this to run on the raspberry pi vm, you'll need to install sshpass: sudo apt-get install sshpass
+
 sshpass -p "<Your Password>" scp -r <Your Username>@data.cs.purdue.edu:<Path to this git repo on your computer>/tests/filesToTest .
 PASS=0
 FAIL=0
