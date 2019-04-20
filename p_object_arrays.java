@@ -21,8 +21,11 @@ class Sorter {
         int ret;
         array =  new Integer[8];
         temp = new Integer();
+        temp2 = new Integer();
+        ret = temp2.create(4);
         ret = temp.create(10);
         array[5] = temp;
+        array[4] = temp2;
         temp2 = array[5];
         System.out.println(temp2.getInt());
         return true;

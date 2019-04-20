@@ -2,7 +2,7 @@ class p_NumberDemo {
 	public static void main(String [] a) {
         {
 		System.out.println("10 choose 4 is ");
-		//System.out.println(new Numbers().choose(10, 4));
+		System.out.println(new Numbers().choose(10, 4));
 		System.out.println("\nGCD of 84, 132 is ");
 		System.out.println(new Numbers().gcd(2035616, 64));
         }
@@ -23,6 +23,7 @@ class Numbers {
 			res = +1; // just to test unary +
 			while (i <= k) {
 				res = res * (n-k+i) / i;
+                                i = i + 1;
 			}
 		} else {
 			res = 0;

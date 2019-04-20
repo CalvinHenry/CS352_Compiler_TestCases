@@ -23,10 +23,20 @@ class GraphTester {
         ret = g.addEdge(0, 2);
         ret = g.addEdge(0, 3);
         ret = g.addEdge(0, 4);
-        System.out.println(g.edgeExists(0, 1));
-        System.out.println(g.edgeExists(1, 0));
-        System.out.println(g.edgeExists(4, 0));
-        System.out.println(g.edgeExists(3, 2));
+        if(g.edgeExists(0, 1)){
+            System.out.println("0, 1");
+        }else {}
+        if(g.edgeExists(1, 0)){
+            System.out.println("0, 1");
+        }else {}
+
+        if(g.edgeExists(4, 0)){
+            System.out.println("4, 0");
+        }else {}
+        if(g.edgeExists(3,2)){
+            System.out.println("3, 2");
+        }else {}
+        
         return ret;
     }
 }

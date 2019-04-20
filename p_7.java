@@ -6,7 +6,9 @@ class p_Dog {
 
               System.out.println(1 + 1);
               System.out.println(1);
-              System.out.println(1 > 3);
+              if(1 > 3)
+                  System.out.println("This shouldn't print");
+              else{}
           }
 
       }

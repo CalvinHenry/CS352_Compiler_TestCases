@@ -5,8 +5,6 @@ class p_number {
         {
             System.out.println("10 choose 4 is ");
             System.out.println(new Numbers().choose(10, 4));
-            System.out.println("GCD of 84, 132 is ");
-            System.out.println(new Numbers().gcd(84, 132));
         }
     }
 }
@@ -29,22 +27,4 @@ class Numbers {
         return res;
     }
 
-    public int gcd(int a, int b) {
-        int tmp;
-        int res;
-        if (a < b) {
-            tmp = a;
-            a = b;
-            b = tmp;
-        } else {
-        }
-        if (b == 0)
-            res = a;
-        else if ((a / b) * b != a) {
-            res = this.gcd(b, a-b*(a/b));
-        } else {
-            res = b;
-        }
-        return res;
-    }
 }

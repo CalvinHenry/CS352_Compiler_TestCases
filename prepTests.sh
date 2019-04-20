@@ -19,46 +19,28 @@ if [ "$dir" != "" ]; then
     cd $dir
 fi
 
-for file in f*${EXT}
+
+for file in *.java
 do
     tests=$((tests+1))
     printf "Test Case: %s\n" $file
-    ../mjavac $file
+    ../mjavac  $file
+    
     if [ $? -eq 0 ]; then
-        printf "${RED}Test Case %s Failed in Grammar Checking\n\n${NC}" $file
-        fails=$((fails+1))
-        typeFail=$((typeFail+1))
-    else
-        printf "${BLUE}Test Case %s Successful\n\n${NC}" $file
-        pass=$((pass+1))
-    fi
-done
-
-for file in p*${EXT}
-do
-    tests=$((tests+1))
-    printf "Test Case: %s\n" $file
-    ../mjavac  $file > userOutput.txt
-    if [ $? -eq 0 ]; then
-
+        outputFileName="${file%%.*}.s"
+        printf "Output file name: %s\n" $outputFileName
+        solutionsFileName="${file%%.*}.txt"
+        mv ${outputFileName} filesToTest/
         javac $file
         if [ $? -eq 0 ]; then
 
             for classFile in p_*.class
             do
                 name="${classFile%%.*}"
-                java $name  > javaOutput.txt
+                java $name  > filesToTest/${solutionsFileName}
             done
             
-            if diff userOutput.txt javaOutput.txt; then
-                printf "${BLUE}Test Case %s Successful\n\n${NC}" $file
-                pass=$((pass+1))
-            else
-                printf "${PINK}Test Case %s Passed Grammar and Type Checking, Failed Interpretation \n\n${NC}" $file
-                fails=$((fails+1))
-                runFail=$((runFail+1))
-                                
-            fi
+            
 
             for tempFile in *.class
             do

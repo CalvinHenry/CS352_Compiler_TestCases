@@ -1,6 +1,8 @@
 class p_Dog {
     public static void main (String [] id) {
-	{}
+	{
+            System.out.println(new Fish().getOne());
+        }
     }
 
 }

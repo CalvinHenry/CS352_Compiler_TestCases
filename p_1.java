@@ -3,7 +3,9 @@ class p_Dog {
 	public static void main (String [] id) {
             {
             System.out.println(new Cat().woof(false));
-            System.out.println(true);
+            if(true){
+                System.out.println("This should print");
+            }else {}
             }
 	}
 
