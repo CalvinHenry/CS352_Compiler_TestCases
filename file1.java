@@ -40,7 +40,7 @@ class cat {
         x = 10;
         x = x + 8;
         y = y -x;
-        a = a * 2 + b - c + d * 4 -f * e;
+        a = a * 2 + b - c + d * 4 -f * e - b * c + b * c + c * b + c;
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);

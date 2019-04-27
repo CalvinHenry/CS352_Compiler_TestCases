@@ -14,11 +14,19 @@ class Factorial {
     public int compute10() {
         int prod;
         int multiplier;
+        int a;
+        int b;
         multiplier = 1;
+        a = 2;
+        b = 4;
         prod = 1;
         while (multiplier <= 10) {
             prod = prod * multiplier;
             multiplier = multiplier + 1;
+            System.out.println(prod);
+            a = a * b;
+            System.out.println(a);
+            System.out.println(20 + 3 * 2 + 5 * 2 - 4 * 3 + 3 * 3 - 2 * 4);
         }
         return prod;
     }

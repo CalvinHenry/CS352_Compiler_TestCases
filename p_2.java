@@ -14,9 +14,12 @@ class Cat {
 		boolean local;
                 int i;
 		local = x;
-                if(x)
+                if(x){
+                    System.out.println("Returning from woof");
                     return 0;
+                }
                 else {}
+                
                 i = new Fish().blub(true);
                 return 0;
 	}
@@ -27,10 +30,11 @@ class Fish {
     Cat c;
 
     public int blub(boolean y){
+
         int x;
         c = new Cat();
         x = c.woof(y);
-
+        System.out.println("Calling blub once");
         return 0;
     }
 

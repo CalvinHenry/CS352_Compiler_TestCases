@@ -13,12 +13,14 @@ class Sorter {
     public boolean bubblesortDemo() {
         int [] array;
         int []array2;
+        int [][][]array3;
         int tmp;
         int i;
         int j;
         boolean isSorted;
         array =  new int[8];
         array2 = new int[8];
+        array3 = new int[2][4][6];
         array2[0] = 60;
         array2[1] = 40;
         array2[2] = 20;
@@ -52,6 +54,12 @@ class Sorter {
             isSorted = isSorted && (array[i] == i*10);
             i = i + 1;
         }
+        System.out.println(array.length);
+        System.out.println(array3.length);
+        System.out.println(array3[0].length);
+        System.out.println(array3[0][0].length);
+        array3 = new int[1][1][1];
+        System.out.println(array.length);
         return isSorted;
     }
 }

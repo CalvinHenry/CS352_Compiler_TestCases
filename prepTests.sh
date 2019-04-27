@@ -19,7 +19,7 @@ if [ "$dir" != "" ]; then
     cd $dir
 fi
 
-
+rm filesToTest/*
 for file in *.java
 do
     tests=$((tests+1))
